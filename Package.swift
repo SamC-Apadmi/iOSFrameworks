@@ -6,20 +6,23 @@ import PackageDescription
 let package = Package(
     name: "LPMessagingSDK",
     platforms: [
-        .iOS(.v)
+        .iOS(.v11)
     ],
     products: [
         .library(
             name: "LPMessagingSDK",
-            targets: ["LPMessagingSDK"])
+            targets: ["LPMessagingSDK", "LPMessagingSDKResources"])
     ],
     targets: [
+        .target(
+            name: "LPMessagingSDKResources",
+            resources: [
+                .process("./**")
+            ]
+        ),
         .binaryTarget(
             name: "LPMessagingSDK",
-            path: "LPMessagingSDK.xcframework",
-            resources: [
-                .process("LPMessagingSDKModels.bundle/**")
-            ]
+            path: "LPMessagingSDK.xcframework"
         )
     ],
     swiftLanguageVersions: [.v5]
