@@ -14,10 +14,15 @@ let package = Package(
             targets: ["LPMessagingSDK"])
     ],
     targets: [
+        .target(
+            name: "LPMessagingSDKResources",
+            resources: [
+                .copy("LPMessagingSDKModels.bundle")
+            ]
+        )
         .binaryTarget(
             name: "LPMessagingSDK",
-            path: "LPMessagingSDK.xcframework",
-            resources: [.copy("LPMessagingSDKModels.bundle")]
+            path: "LPMessagingSDK.xcframework"
         )
     ],
     swiftLanguageVersions: [.v5]
