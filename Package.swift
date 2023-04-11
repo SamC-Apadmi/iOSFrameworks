@@ -16,6 +16,7 @@ let package = Package(
     targets: [
         .target(
             name: "LPMessagingSDKResources",
+            path: "./LPMessagingSDKModels.bundle",
             resources: [
                 .process("./**")
             ]
