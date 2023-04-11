@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "LPMessagingSDK",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v11)
     ],
@@ -19,8 +20,7 @@ let package = Package(
             path: "./LPMessagingSDKModels.bundle",
             resources: [
                 .process("./**")
-            ],
-            defaultLocalization: "en"
+            ]
         ),
         .binaryTarget(
             name: "LPMessagingSDK",
