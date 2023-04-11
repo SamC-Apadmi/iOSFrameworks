@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "LPMessagingSDK",
-            targets: ["LPMessagingSDK"])
+            targets: ["LPMessagingSDK", "LPMessagingSDKResources"])
     ],
     targets: [
         .target(
@@ -19,7 +19,7 @@ let package = Package(
             resources: [
                 .copy("LPMessagingSDKModels.bundle")
             ]
-        )
+        ),
         .binaryTarget(
             name: "LPMessagingSDK",
             path: "LPMessagingSDK.xcframework"
