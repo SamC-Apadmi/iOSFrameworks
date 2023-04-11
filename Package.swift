@@ -19,7 +19,8 @@ let package = Package(
             path: "./LPMessagingSDKModels.bundle",
             resources: [
                 .process("./**")
-            ]
+            ],
+            defaultLocalization: "en"
         ),
         .binaryTarget(
             name: "LPMessagingSDK",
