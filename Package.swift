@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "LPMessagingSDKResources",
             resources: [
-                .copy("LPMessagingSDKModels.bundle")
+                .process("LPMessagingSDKModels.bundle")
             ]
         ),
         .binaryTarget(
