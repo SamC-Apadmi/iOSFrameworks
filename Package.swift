@@ -19,7 +19,7 @@ let package = Package(
             name: "LPMessagingSDKModels",
             path: ".",
             resources: [
-                .copy("LPMessagingSDKModels.bundle")
+                .process("LPMessagingSDKModels.bundle")
             ]
         ),
         .binaryTarget(
